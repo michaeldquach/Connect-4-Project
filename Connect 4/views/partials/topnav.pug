@@ -1,0 +1,30 @@
+// Top navigation
+.topnav
+  .header
+    span#pagetitle
+  .login-container
+    // I'll make handlers for these events later
+    button#logButton(style='width:100px;') Login
+
+    // Modal Login Page
+    #id01.modal
+      form.modal-content.animate#login-form
+        .imgcontainer#close-button
+          span.close(title='Close Modal') &times;
+        .container
+          label(for='uname') Username
+          input#userName(type='text' placeholder='Enter Username' name='userName' required='')
+          label(for='psw') Password
+          input#password(type='password' placeholder='Enter Password' name='password' required='')
+          label.checkbox-label
+            input(type='checkbox' checked='checked' name='remember')
+            |  Remember me
+          button#loginButton(type='submit' value='login') Login
+          // Register button will have different functionality in the future
+          button#registerButton(type='submit' value='register') Register
+
+//I am unsure of how to directly use this variable in the external clientside js.
+script(type="text/javascript").
+  var online = !{JSON.stringify(online)}   
+     
+script(src="../../javascript/topnav.js")

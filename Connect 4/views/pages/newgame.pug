@@ -1,0 +1,36 @@
+doctype html
+head
+  link(href='https://fonts.googleapis.com/css2?family=Poppins&display=swap' rel='stylesheet')
+  style
+    include ../../css/styles.css
+
+include ../partials/sidenav
+
+include ../partials/topnav
+
+// Page content
+.main
+  .container
+    button#defaultOpen.tablink New Match
+    button.tablink Invites
+
+    #NewMatch.tabcontent
+      table#matchTable.myTable
+        tr.header
+          th Select Opponent
+          th Spectator Options
+      button.match-button#matchbutton(type='submit') Find match!
+
+    #Invites.tabcontent
+      input#invitesInput.search-input(type='text' placeholder='Search usernames')
+      table#invitesTable.myTable
+        tr.header
+          th Username
+          th Spectator Mode
+          th Status
+          th Action
+          th
+script(type="text/javascript").
+  var opponentID = !{JSON.stringify(opponentID)}
+
+script(src="../../javascript/newgame.js")

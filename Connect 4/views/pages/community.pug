@@ -1,0 +1,39 @@
+doctype html
+head
+  link(href='https://fonts.googleapis.com/css2?family=Poppins&display=swap' rel='stylesheet')
+  style
+    include ../../css/styles.css
+
+include ../partials/sidenav
+
+include ../partials/topnav
+
+// Page content
+.main
+  .container
+    button#defaultOpen.tablink Players   
+    button.tablink Leaderboards
+
+    #Players.tabcontent
+      input#playersInput.search-input(type='text' placeholder='Search usernames')
+
+      table#playersTable.myTable
+        tr.header
+          th Username
+          th Profile
+          th Status
+
+    #Leaderboards.tabcontent
+      input#leaderboardInput.search-input(type='text' placeholder='Search usernames')
+
+      table#leaderboardTable.myTable
+        tr.header
+          th Rank
+          th Username
+          th W
+          th L
+          th D
+          th Profile
+          th Status
+
+script(src="../../javascript/community.js")

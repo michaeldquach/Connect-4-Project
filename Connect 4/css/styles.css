@@ -1,0 +1,389 @@
+/* The body */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 200px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #24212b; /* dark violet */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 0px;
+}
+
+.sidenav-logo{
+  height: 65px;
+  font-size: 14px;
+}
+
+
+/* The navigation menu links */
+.sidenav a {
+  border:none;
+  padding: 12px 0px 12px 24px;
+  width:100%;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Poppins, sans-serif; 
+  display: block;
+  float:left;
+  outline:0;
+  color: #ffffff; /*White when unselected*/
+}
+
+.sidenav a.active{
+  color: #f84982;
+  background-color: #2f2b38;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f84982;
+  background-color: #292531;
+}
+
+/* Top navigation bar */
+.topnav{
+  height: 65px;
+  margin: 0px 0px 0px 200px;
+  overflow: hidden;
+  background-color: #2f2b38;
+}
+
+.topnav a{
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+}
+
+.topnav .header {
+  height: 100%;
+  float: left;
+  font-size: 32px;
+  font-family: Poppins, sans-serif; 
+  color: #ffffff;
+  padding: 10px 0px 0px 50px;
+}
+
+.topnav .login-container {
+  float: right;
+  height: 100%;
+  width: 10%;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 50px 0px 0px;
+}
+
+.topnav .login-container button {  
+  float: right;
+  background-color: #f84982;
+  color: #ffffff;
+  padding: 10px 16px 10px 16px;
+  margin: 8px 0px 8px 0px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Poppins, sans-serif; 
+}
+
+.topnav .login-container button:hover {
+  opacity: 0.8;
+}
+
+/* The Modal (background) */
+.topnav .login-container .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 65px;
+}
+
+/* Modal Content/Box */
+.topnav .login-container .modal-content {
+  background-color: #292531;
+  margin: 0px auto; /* 15% from the top and centered */
+  /*border: 1px solid #888;*/
+  width: 30%; /* Could be more or less, depending on screen size */
+  height: 380px;
+}
+
+.topnav .login-container .modal-content .container {
+  padding: 16px;
+}
+
+.topnav .login-container .modal-content label{
+  font-size: 18px;
+  font-family: Poppins, sans-serif; 
+  color: #f84982;
+  display: block;
+  margin: 14px 0px;
+}
+
+.topnav .login-container .modal-content button{
+  width: 100%;
+  display: inline-block;
+}
+
+.topnav .login-container .modal-content label.checkbox-label{
+  font-size: 14px;
+  color: #f84982;
+  display: block;
+}
+
+/* Full-width inputs */
+.topnav .login-container .modal-content input[type=text], input[type=password] {
+  width: 100%;
+  padding: 4px 8px;
+  margin-bottom: 14px;
+  display: block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Poppins, sans-serif; 
+  outline: none;
+}
+
+/* The Close Button */
+.topnav .login-container .close {
+  /* Position it in the top right corner outside of the modal */
+  position: relative;
+  float: right;
+  left: 30px;
+  top: -30px;
+  color: #f84982;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Close button on hover */
+.topnav .login-container .close:hover,
+.topnav .login-container .close:focus {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Style page content */
+.main {
+  height: 100%;
+  margin: 0px 0px 0px 200px;
+  padding: 45px 50px 0px 50px;
+  background-color: #2f2b38; /* Violet */
+}
+
+.main .container {  
+  background-color: #2f2b38; /* Violet */
+  font-size: 20px;
+  font-weight: 400;
+  font-family: Poppins, sans-serif; 
+  color: #ced7e0;
+}
+
+.main select {
+  padding: 10px 16px;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Poppins, sans-serif; 
+  color: #ffffff;
+  background-color: #555;
+  width: 160px;
+  outline: none;
+}
+
+.main button {
+  width: 160px;
+  color: #ffffff;
+  padding: 10px 10px 10px 10px;
+  margin: 8px 0px 8px 0px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: Poppins, sans-serif;  
+}
+
+.main button.match-button {  
+  background-color: #f84982;
+}
+
+.main button.match-button:hover {  
+  opacity: 0.8;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: #ffffff;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: #ced7e0;
+  display: none;
+  padding: 50px 0px;
+  height: 100%;
+}
+
+.search-input{
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px; /* Add padding */
+  margin-bottom: 6px; /* Add some space below the input */
+  outline: none;
+  box-sizing:border-box
+}
+
+.myTable, .myTable-no-hover, .myTable a {
+  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full-width */
+  font-size: 18px; /* Increase font-size */
+  color: #ced7e0;
+  table-layout: fixed;
+}
+
+.myTable th, .myTable td, .myTable-no-hover th, .myTable-no-hover td {
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+}
+
+.myTable tr:hover, tr:hover a, tr.header {
+  /* Add a grey background color on hover */
+  color: #f84982;
+  background-color: #ced7e0;
+}
+
+.main .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.main .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.main .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #777;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.main .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.main input:checked + .slider {
+  background-color: #f84982;
+}
+
+.main input:focus + .slider {
+  box-shadow: 0 0 1px #f84982;
+}
+
+.main input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.main .switch-container {
+  padding-top: 50px;
+}
+
+.main #privacy-label {
+  padding-left: 12px;
+}
+
+.div#parentDiv {
+  height: 600px;
+
+}
+
+.div#boardDiv {
+  width: 80%;
+  height: 300px;
+  float: left;
+}
+
+.div#chatDiv {
+  width: 20%;
+  height: 100%;
+  float: right;
+}
+
+.div#buttonsDiv {
+  width: 80%;
+  display:inline-block;
+}
+
+table#board {
+}
+
+.grid {
+}
+
+.grid div {
+  height: 20px;
+  width: 20px;
+}
+
+.player-one {
+  background-color: red;
+  border-radius: 10px;
+}
+
+.player-two {
+  background-color: blue;
+  border-radius: 10px;
+}

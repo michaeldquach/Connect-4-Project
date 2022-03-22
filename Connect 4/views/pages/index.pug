@@ -1,0 +1,37 @@
+doctype html
+head
+  link(href='https://fonts.googleapis.com/css2?family=Poppins&display=swap' rel='stylesheet')
+  style
+    include ../../css/styles.css
+
+include ../partials/sidenav
+
+include ../partials/topnav
+
+// Page content
+.main
+  .container  
+    button#defaultOpen.tablink Statistics
+    button.tablink Settings
+
+    .tabcontent(id='Statistics')
+      table#statisticsTable.myTable-no-hover
+        tr.header
+          th Games
+          th Wins
+          th Losses
+          th Draws
+          th W/L %
+
+    .tabcontent(id='Settings')
+      .switch-container
+        label.switch
+          input#privacySwitch(type='checkbox')
+          span.slider
+        label#privacy-label(for='privacy') Enable &quot;Friends Only&quot; mode
+
+
+script(type="text/javascript").
+  var userProfile = !{JSON.stringify(user)}
+
+script(src="../../javascript/dashboard.js")

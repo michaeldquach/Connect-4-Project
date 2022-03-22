@@ -1,0 +1,39 @@
+doctype html
+head
+  link(href='https://fonts.googleapis.com/css2?family=Poppins&display=swap' rel='stylesheet')
+  style
+    include ../../css/styles.css
+
+include ../partials/sidenav
+
+include ../partials/topnav
+
+// Page content
+.main
+  .container
+    button#defaultOpen.tablink Friends
+    button.tablink Requests
+
+    #Friends.tabcontent
+      input#friendsInput.search-input(type='text' placeholder='Search usernames')
+      table#friendsTable.myTable
+        tr.header
+          th Username
+          th Profile
+          th Invite
+          th Status
+
+    #Requests.tabcontent
+      input#requestsInput.search-input(type='text' placeholder='Search usernames')
+      table#requestsTable.myTable
+        tr.header
+          th Username
+          th Status
+          th Action
+          th
+
+//I am unsure of how to directly use this variable in the external clientside js.
+script(type="text/javascript").
+  var playerProfile = !{JSON.stringify(currentUser)}
+
+script(src="../../javascript/friends.js")

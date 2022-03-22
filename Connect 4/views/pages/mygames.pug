@@ -1,0 +1,36 @@
+doctype html
+head
+  link(href='https://fonts.googleapis.com/css2?family=Poppins&display=swap' rel='stylesheet')
+  style
+    include ../../css/styles.css
+
+include ../partials/sidenav
+
+include ../partials/topnav
+
+// Page content
+.main
+  .container
+    button#defaultOpen.tablink Active Games
+    button.tablink Game History
+
+    .tabcontent(id='Active Games')
+      input#gameactiveInput.search-input(type='text' placeholder='Search usernames')
+      table#activegameTable.myTable
+        tr.header
+          th Opponent
+          th Status
+          th Game Link
+
+    .tabcontent(id='Game History')
+      input#gamehistoryInput.search-input(type='text' placeholder='Search usernames')
+      table#gamehistoryTable.myTable
+        tr.header
+          th Opponent
+          th Outcome
+          th Replay Link          
+
+script(type="text/javascript").
+  var userProfile = !{JSON.stringify(user)}
+
+script(src="../../javascript/mygames.js")
